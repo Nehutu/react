@@ -3,13 +3,13 @@ import { NavLink, Route, Routes } from "react-router-dom";
 import "./App.css";
 
 const Profile = () => {
-  return <h1>Profile page</h1>;
+  return <h1>Profile page.</h1>;
 };
 const Messages = () => {
-  return <h1>Messages page</h1>;
+  return <h1>Messages page.</h1>;
 };
 const Settings = () => {
-  return <h1>Settings page</h1>;
+  return <h1>Settings page.</h1>;
 };
 
 function App() {
