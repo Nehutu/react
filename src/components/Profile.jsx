@@ -17,7 +17,14 @@ export const Profile = () => {
         </p>
         <p className={style.id}>Id: 4</p>
         <p>Personal history</p>
-        <p>
+        <p
+          style={{
+            border: "solid 2px brown",
+            padding: "10px",
+            borderRadius: "5px",
+            backgroundColor: "lightgrey",
+          }}
+        >
           Lorem ipsum dolor sit amet consectetur adipisicing elit. A, quas.
           Voluptatum, laboriosam dolores, voluptas excepturi dignissimos,
           officiis mollitia odio delectus libero praesentium perferendis! Ex
