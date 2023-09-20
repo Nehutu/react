@@ -3,9 +3,10 @@ import { NavLink, Route, Routes } from "react-router-dom";
 import "./App.css";
 import { Profile } from "./components/Profile";
 import { Messages } from "./components/Messages";
+import { Friends } from "./components/Friends";
 import { Settings } from "./components/Settings";
 
-function App() {
+function App(props) {
   return (
     <div className="container mt-5">
       <div className="row">
@@ -16,6 +17,9 @@ function App() {
             </NavLink>
             <NavLink to="messages" className="nav-link">
               Messages
+            </NavLink>
+            <NavLink to="friends" className="nav-link">
+              Friends
             </NavLink>
             <NavLink to="settings" className="nav-link">
               Settings
@@ -30,8 +34,15 @@ function App() {
                 <h3>This is your personal account. Use menu on the left.</h3>
               }
             />
-            <Route path="/profile" element={<Profile />}></Route>
+            <Route
+              path="/profile"
+              element={<Profile function={props.functions.key_getUser} />}
+            ></Route>
             <Route path="/messages" element={<Messages />}></Route>
+            <Route
+              path="/friends"
+              element={<Friends function={props.functions.key_getUsers} />}
+            ></Route>
             <Route path="/settings" element={<Settings />}></Route>
           </Routes>
         </div>
