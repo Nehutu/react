@@ -1,16 +1,9 @@
 // import logo from './logo.svg';
 import { NavLink, Route, Routes } from "react-router-dom";
 import "./App.css";
-
-const Profile = () => {
-  return <h1>Profile page.</h1>;
-};
-const Messages = () => {
-  return <h1>Messages page.</h1>;
-};
-const Settings = () => {
-  return <h1>Settings page.</h1>;
-};
+import { Profile } from "./components/Profile";
+import { Messages } from "./components/Messages";
+import { Settings } from "./components/Settings";
 
 function App() {
   return (
@@ -31,6 +24,12 @@ function App() {
         </div>
         <div className="col-md-9">
           <Routes>
+            <Route
+              path="/"
+              element={
+                <h3>This is your personal account. Use menu on the left.</h3>
+              }
+            />
             <Route path="/profile" element={<Profile />}></Route>
             <Route path="/messages" element={<Messages />}></Route>
             <Route path="/settings" element={<Settings />}></Route>
