@@ -35,7 +35,7 @@ function App(props) {
               }
             />
             <Route
-              path="/profile"
+              path="/profile/*"
               element={<Profile function={props.functions.key_getUser} />}
             ></Route>
             <Route path="/messages" element={<Messages />}></Route>

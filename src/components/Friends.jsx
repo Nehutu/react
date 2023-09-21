@@ -1,10 +1,15 @@
+import { NavLink } from "react-router-dom";
+
 const TableRow = (props) => {
   return (
     <tr>
       <th scope="row">{props.index + 1}</th>
-      <td>{props.name}</td>
-      <td>{props.surname}</td>
-      <td>empty</td>
+      <td>
+        <NavLink to={"/profile/" + props.id}>
+          {props.name} {props.surname}
+        </NavLink>
+      </td>
+      <td>{props.email}</td>
     </tr>
   );
 };
@@ -18,8 +23,10 @@ export const Friends = (props) => {
       <TableRow
         index={i}
         key={i}
+        id={users[i].id}
         name={users[i].name}
         surname={users[i].surname}
+        email={users[i].email}
       />
     );
   }
@@ -31,8 +38,7 @@ export const Friends = (props) => {
           <thead>
             <tr>
               <th scope="col">#</th>
-              <th scope="col">Name</th>
-              <th scope="col">Surname</th>
+              <th scope="col">Full name</th>
               <th scope="col">E-mail</th>
             </tr>
           </thead>
