@@ -1,4 +1,5 @@
 import { NavLink } from "react-router-dom";
+import pageImg from "../assets/img/Rock.webp";
 
 const TableRow = (props) => {
   return (
@@ -31,19 +32,24 @@ export const Friends = (props) => {
     );
   }
   return (
-    <div className="row">
+    <div className="container-fluid">
       <h1 className="text-center">Friends page.</h1>
-      <div className="col-12">
-        <table className="table table-bordered">
-          <thead>
-            <tr>
-              <th scope="col">#</th>
-              <th scope="col">Full name</th>
-              <th scope="col">E-mail</th>
-            </tr>
-          </thead>
-          <tbody>{userRow}</tbody>
-        </table>
+      <div className="row">
+        <div className="col-12">
+          <table className="table table-bordered">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Full name</th>
+                <th scope="col">E-mail</th>
+              </tr>
+            </thead>
+            <tbody>{userRow}</tbody>
+          </table>
+        </div>
+        <div className="col-12 mt-5">
+          <img src={pageImg} alt="pic" width="100%" />
+        </div>
       </div>
     </div>
   );
