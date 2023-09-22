@@ -17,6 +17,11 @@ const TableRow = (props) => {
 };
 
 export class Friends extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { userRow: [] };
+  }
+
   componentDidMount() {
     this.props.function().then((users) => {
       let userCount = users.length;
@@ -34,6 +39,7 @@ export class Friends extends React.Component {
           />
         );
       }
+      this.setState({ userRow: userRow });
     });
   }
 
@@ -51,7 +57,7 @@ export class Friends extends React.Component {
                   <th scope="col">E-mail</th>
                 </tr>
               </thead>
-              <tbody>{}</tbody>
+              <tbody>{this.state.userRow}</tbody>
             </table>
           </div>
           <div className="col-12 mt-5">

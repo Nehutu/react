@@ -54,7 +54,7 @@ const user = {
 let users = [];
 
 export function getUser(userId) {
-  for (let i = 0; i < Object.keys(users).length; i++) {
+  for (let i = 0; i < users.length; i++) {
     if (users[i].id == userId) {
       return users[i];
     }
