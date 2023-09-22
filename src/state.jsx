@@ -65,6 +65,5 @@ export function getUser(userId) {
 export async function getUsers() {
   let response = await fetch("http://yasmin.p-host.in/getUsers");
   users = await response.json();
-  console.log(users);
   return users;
 }
