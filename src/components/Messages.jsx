@@ -17,5 +17,9 @@ export const Messages = () => {
     fetchData();
   }, []);
 
-  return <div className="bg-gray-200 p-3">{advice}</div>;
+  return (
+    <div className="bg-gray-200 p-3 rounded-lg border-2 border-gray-600">
+      {advice}
+    </div>
+  );
 };
